@@ -14,12 +14,14 @@
 </head>
 
 <body>
+
     <!-- NAVBAR -->
+
     <header>
         <nav class="navbar bg-dark">
-            <div class="container-fluid">
-                <h4 class="title text-white">Bool Factory</h4>
-                <ul class="nav justify-content-end">
+            <div class="container-fluid ">
+                <h4 class="title text-white p-1">Bool Factory</h4>
+                <ul class="nav justify-content">
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Home</a>
                     </li>
@@ -35,10 +37,10 @@
     </header>
 
     <!-- BODY PAGE -->
-    <main class="py-1">
+
+    <main class="paginaprincipale">
         <!-- COLONNA 1-->
-        <div class="container col-12 m-4">
-           
+        <div class="labels container">
             <div class="form-group w-50 p-2">
                 <h4 class="richiestaprev text-dark">Richiesta Preventivo</h4>
                 <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
@@ -59,35 +61,58 @@
                     <input type="mail" class="form-control" id="email" placeholder="inserisci la tua email"
                         autocomplete="off">
             </div>
-           <div class="form-group w-50 p-2 py-4">
-            <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
-            <select class="form-select" aria-label=".form-select-sm example">
-                <option selected>Seleziona il tipo di lavoro</option>
-                <option value="1">Lavoro di Tipo 1 </option>
-                <option value="2">Lavoro di Tipo 2</option>
-                <option value="3">Lavoro di Tipo 3</option>
-              </select>
-           </div>
-           <div class="form-floating w-50 p-2 py-5">
-            <label class="p-3" for="textarea">Textarea con Bootstrap 5</label>
-            <textarea class="form-control" placeholder="lascia qui un commento" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea"></label>
-          </div>
-          <div class="form-group">
-            <form action="" id="user-form">
-                <label class="p-3" for="discountcoude">Codice Promozionale (Opzionale)</label>
-                <input type="mail" class="form-control" id="discountcode" placeholder="inserisci un codice promozionale valido"
-                    autocomplete="off">
-        </div>
-        <div class="form-check w-50 py-5">
-            <input class="form-check-input" type="checkbox" value="" id="checkPolicy">
-            <label class="form-check-label" for="checkPolicy">
-              Accetto la Privacy Policy
-            </label>
-        </div>
+            <div class="form-group w-50 p-2 py-4">
+                <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
+                <select class="form-select" aria-label=".form-select-sm example">
+                    <option selected>Seleziona il tipo di lavoro</option>
+                    <option value="1">Lavoro di Tipo 1 </option>
+                    <option value="2">Lavoro di Tipo 2</option>
+                    <option value="3">Lavoro di Tipo 3</option>
+                </select>
+            </div>
+            <div class="form-floating w-50 p-2 py-5">
+                <label class="p-3" for="textarea">Textarea con Bootstrap 5</label>
+                <textarea class="form-control" placeholder="lascia qui un commento" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea"></label>
+            </div>
+            <div class="form-group w-50 p-2 mg-2 lg-2">
+                <form action="" id="user-form">
+                    <label class="p-2" for="discountcoude">Codice Promozionale (Opzionale)</label>
+                    <input type="mail" class="form-control" id="discountcode"
+                        placeholder="inserisci un codice promozionale valido" autocomplete="off">
+            </div>
+            <div class="form-check w-50 ">
+                <input class="form-check-input" type="checkbox" value="" id="checkPolicy">
+                <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
+            </div>
+            <!-- BOTTONE CALCOLA  -->
+
+            <!-- <div class="">
+                <a href="#" class="btn btn-primary">Calcola Preventivo</a>
+                <ul>
+                    <h4>Prezzo Finale</h2>
+                        <li class="list-group-item">€00,00</li>
+                </ul>
+            </div> -->
+        
+
+        <!-- COLONNA 2 -->
+        <!-- <div class="card" style="width: 18rem;">
+                 IMMAGINE DA INSERIRE(300x200)
+            <div class="card-body">
+                <h5 class="card-title">I nostri contatti</h5>
+                <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="http://" type="mail">help@boolfactory.test</a></li>
+                <li class="list-group-item"><a href="http://" type="phone">+0142428224</a></li>
+                <li class="list-group-item"><a href="http://">Help Desk</a></li>
+            </ul>
+        </div> -->
     </main>
 
     <!-- FOOTER BAR -->
+
     <footer>
 
 
