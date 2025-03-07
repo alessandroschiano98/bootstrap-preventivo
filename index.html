@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Preventivo Bootstrap</title>
     <!-- LINK CSS-->
     <link rel="stylesheet" href="./css/style.css">
     <!-- LINK BOOTSTRAP -->
@@ -21,13 +21,13 @@
                 <h4 class="title text-white">Bool Factory</h4>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Home</a>
+                        <a class="nav-link text-secondary" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Servizi</a>
+                        <a class="nav-link text-secondary" href="#">Servizi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contatti</a>
+                        <a class="nav-link text-secondary" href="#">Contatti</a>
                     </li>
                 </ul>
             </div>
@@ -35,8 +35,56 @@
     </header>
 
     <!-- BODY PAGE -->
-    <main>
-
+    <main class="py-1">
+        <!-- COLONNA 1-->
+        <div class="container col-12 m-4">
+           
+            <div class="form-group w-50 p-2">
+                <h4 class="richiestaprev text-dark">Richiesta Preventivo</h4>
+                <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                <form action="" id="user-form">
+                    <label class="p-2" for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" placeholder="inserisci il tuo nome"
+                        autocomplete="off">
+            </div>
+            <div class="form-group w-50 p-2">
+                <form action="" id="user-form">
+                    <label class="p-2" for="lastname">Cognome</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="inserisci il tuo cognome"
+                        autocomplete="off">
+            </div>
+            <div class="form-group w-50 p-2">
+                <form action="" id="user-form">
+                    <label class="p-2" for="email">Email</label>
+                    <input type="mail" class="form-control" id="email" placeholder="inserisci la tua email"
+                        autocomplete="off">
+            </div>
+           <div class="form-group w-50 p-2 py-4">
+            <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
+            <select class="form-select" aria-label=".form-select-sm example">
+                <option selected>Seleziona il tipo di lavoro</option>
+                <option value="1">Lavoro di Tipo 1 </option>
+                <option value="2">Lavoro di Tipo 2</option>
+                <option value="3">Lavoro di Tipo 3</option>
+              </select>
+           </div>
+           <div class="form-floating w-50 p-2 py-5">
+            <label class="p-3" for="textarea">Textarea con Bootstrap 5</label>
+            <textarea class="form-control" placeholder="lascia qui un commento" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea"></label>
+          </div>
+          <div class="form-group">
+            <form action="" id="user-form">
+                <label class="p-3" for="discountcoude">Codice Promozionale (Opzionale)</label>
+                <input type="mail" class="form-control" id="discountcode" placeholder="inserisci un codice promozionale valido"
+                    autocomplete="off">
+        </div>
+        <div class="form-check w-50 py-5">
+            <input class="form-check-input" type="checkbox" value="" id="checkPolicy">
+            <label class="form-check-label" for="checkPolicy">
+              Accetto la Privacy Policy
+            </label>
+        </div>
     </main>
 
     <!-- FOOTER BAR -->
