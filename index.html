@@ -20,7 +20,7 @@
     <header>
         <nav class="navbar bg-dark">
             <div class="container-fluid ">
-                <h4 class="title text-white p-1 mx-5 ">Bool Factory</h4>
+                <h5 class="title text-white p-1 mx-5 ">Bool Factory</h5>
                 <ul class="nav justify-content mx-5">
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Home</a>
@@ -40,8 +40,12 @@
 
     <main class="paginaprincipale">
         <!-- COLONNA 1-->
-        <div class="labels container my-4 mx-5">
+        <div class="labels container my-2 mx-5">
             <form action="" id="user-form">
+                <div class="form-group w-50 p-2">
+                    <h2 class="preventivo text-dark p-1">Richiesta Preventivo</h2>
+                    <p class="p-1">Compila un form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                </div>
                 <div class="form-group w-50 p-2">
                     <label class="p-2" for="name">Nome</label>
                     <input type="text" class="form-control" id="name" placeholder="inserisci il tuo nome" autocomplete="off">
@@ -77,11 +81,11 @@
                     <input type="text" class="form-control" id="discountcode" placeholder="inserisci un codice promozionale valido" autocomplete="off">
                 </div>
             
-                <div class="form-check w-50 p-4 mx-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkPolicy">
+                <div class="form-check w-50 p-4 mx-3">
+                    <input class="form-check-input" type="checkbox" value="" id="checkPolicy" >
                     <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
                 </div>
-                <div class="calcolabtn form-check w-50 p-4 mx-5 d-flex">
+                <div class="calcolabtn form-check w-50 p-4 mx-5 d-flex justify-content-between py-5">
                     <button type="button" class="btn btn-primary">Calcola Preventivo</button>
                    <h3 class="risultato">Prezzo Finale</h3><br>
                    
