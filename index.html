@@ -17,19 +17,21 @@
     <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid">
-                <h5 class="title text-white p-1 mx-5">Bool Factory</h5>
-                <ul class="nav justify-content mx-5">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Servizi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Contatti</a>
-                    </li>
-                </ul>
+            <div class="container-fluid d-flex justify-content-between">
+                <h5 class="title text-white p-1 mx-5 text-al">Bool Factory</h5>
+                <div class="">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Servizi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary " href="#">Contatti</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -84,9 +86,10 @@
                         <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
                     </div>
                     <!-- BUTTON -->
-                    <div class="form-check p-4 d-flex justify-content-between">
-                        <button type="button" class="btn btn-primary">Calcola Preventivo</button>
-                        <h3 class="risultato">Prezzo Finale</h3>
+                    <div class="form-check p-4 d-flex justify-content-around">
+                            <button type="button" class="btn btn-primary ">Calcola Preventivo</button>
+                        <h3 class="risultato">Prezzo Finale <span class="">€200,00</span></h3>
+                        
                     </div>
                 </form>
             </div>
@@ -97,7 +100,7 @@
                     <img src="./image/foto-card.jpg" class="card-img-top" alt="Placeholder">
                     <div class="card-body">
                         <h5 class="card-title">I nostri contatti</h5>
-                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci.</p>
+                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">help@boolfactory.test</li>
