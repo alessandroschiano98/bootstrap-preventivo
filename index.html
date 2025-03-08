@@ -17,10 +17,10 @@
     <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid d-flex justify-content-between">
-                <h5 class="title text-white p-1 mx-5 text-al">Bool Factory</h5>
+            <div class="container d-flex justify-content-between">
+                <h5 class="title text-white p-0 mx-3">Bool Factory</h5>
                 <div class="">
-                    <ul class="nav">
+                    <ul class="nav mx-0">
                         <li class="nav-item">
                             <a class="nav-link text-secondary" href="#">Home</a>
                         </li>
@@ -42,23 +42,27 @@
             <!-- COLONNA FORM -->
             <div class="col-md-8">
                 <form action="" id="user-form">
-                    <h2 class="preventivo text-dark p-1">Richiesta Preventivo</h2>
-                    <p class="p-1">Compila un form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
-
+                    <div class="containertididascalia">
+                        <h2 class="preventivo text-dark p-3">Richiesta Preventivo</h2>
+                    <p class="p-3">Compila un form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                    </div>
                     <!-- NAME -->
                     <div class="form-group p-2">
                         <label class="p-2" for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome" autocomplete="off">
+                        <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome"
+                            autocomplete="off">
                     </div>
                     <!-- LASTNAME -->
                     <div class="form-group p-2">
                         <label class="p-2" for="lastname">Cognome</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Inserisci il tuo cognome" autocomplete="off">
+                        <input type="text" class="form-control" id="lastname" placeholder="Inserisci il tuo cognome"
+                            autocomplete="off">
                     </div>
                     <!-- EMAIL -->
                     <div class="form-group p-2">
                         <label class="p-2" for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email" autocomplete="off">
+                        <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email"
+                            autocomplete="off">
                     </div>
                     <!-- WORKS -->
                     <div class="form-group p-2">
@@ -78,24 +82,25 @@
                     <!-- PROMO CODE -->
                     <div class="form-group p-2">
                         <label class="p-2" for="discountcode">Codice Promozionale (Opzionale)</label>
-                        <input type="text" class="form-control" id="discountcode" placeholder="Inserisci un codice promozionale valido" autocomplete="off">
+                        <input type="text" class="form-control" id="discountcode"
+                            placeholder="Inserisci un codice promozionale valido" autocomplete="off">
                     </div>
                     <!-- PRIVACY POLICY -->
-                    <div class="form-check p-4">
+                    <div class="form-check m-2">
                         <input class="form-check-input" type="checkbox" id="checkPolicy">
                         <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
                     </div>
                     <!-- BUTTON -->
-                    <div class="form-check p-4 d-flex justify-content-around">
-                            <button type="button" class="btn btn-primary ">Calcola Preventivo</button>
-                        <h3 class="risultato">Prezzo Finale <span class="">€200,00</span></h3>
-                        
+                    <div class="form-check p-4 d-flex justify-content-around m-4">
+                        <button type="buttonCalcolaPrev" class="btn btn-primary ">Calcola Preventivo</button>
+                        <h3 class="risultatoText">Prezzo Finale <span class="">€200,00</span></h3>
+
                     </div>
                 </form>
             </div>
 
             <!-- COLONNA CARD -->
-            <div class="bodycard col-md-4 d-flex align-items-start justify-content-end py-4 px-5">
+            <div class="container bodycard col-md-4 d-flex align-items-start justify-content-end py-3">
                 <div class="card" style="width: 18rem;">
                     <img src="./image/foto-card.jpg" class="card-img-top" alt="Placeholder">
                     <div class="card-body">
