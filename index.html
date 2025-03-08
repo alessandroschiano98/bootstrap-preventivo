@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -10,17 +10,15 @@
     <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-
     <header>
-        <nav class="navbar bg-dark">
-            <div class="container-fluid ">
-                <h5 class="title text-white p-1 mx-5 ">Bool Factory</h5>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <h5 class="title text-white p-1 mx-5">Bool Factory</h5>
                 <ul class="nav justify-content mx-5">
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Home</a>
@@ -37,101 +35,88 @@
     </header>
 
     <!-- BODY PAGE -->
-
-    <main class="paginaprincipale">
-        <!-- COLONNA 1-->
-        <div class="labels container my-2 mx-5">
-            <div class="row">
+    <main class="container my-4">
+        <div class="row">
+            <!-- COLONNA FORM -->
+            <div class="col-md-8">
                 <form action="" id="user-form">
-                    <div class="col-md-12">
-                        <div class="form-group w-50 p-2">
-                            <h2 class="preventivo text-dark p-1">Richiesta Preventivo</h2>
-                            <p class="p-1">Compila un form per richiedere un preventivo per i nostri servizi di
-                                sviluppo.</p>
-                        </div>
-                        <div class="form-group w-50 p-2">
-                            <label class="p-2" for="name">Nome</label>
-                            <input type="text" class="form-control" id="name" placeholder="inserisci il tuo nome"
-                                autocomplete="off">
-                        </div>
+                    <h2 class="preventivo text-dark p-1">Richiesta Preventivo</h2>
+                    <p class="p-1">Compila un form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
 
-                        <div class="form-group w-50 p-2">
-                            <label class="p-2" for="lastname">Cognome</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="inserisci il tuo cognome"
-                                autocomplete="off">
-                        </div>
-
-                        <div class="form-group w-50 p-2">
-                            <label class="p-2" for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="inserisci la tua email"
-                                autocomplete="off">
-                        </div>
-
-                        <div class="form-group w-50 p-2">
-                            <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
-                            <select class="form-select" id="typeofwork">
-                                <option selected>Seleziona il tipo di lavoro</option>
-                                <option value="1">Lavoro di Tipo 1</option>
-                                <option value="2">Lavoro di Tipo 2</option>
-                                <option value="3">Lavoro di Tipo 3</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group w-50 p-2">
-                            <label for="textArea" class="form-label p-2">Textarea con Bootstrap 5</label>
-                            <textarea class="form-control" id="textArea" rows="3"></textarea>
-                        </div>
-
-                        <div class="form-group w-50 p-2">
-                            <label class="p-2" for="discountcode">Codice Promozionale (Opzionale)</label>
-                            <input type="text" class="form-control" id="discountcode"
-                                placeholder="inserisci un codice promozionale valido" autocomplete="off">
-                        </div>
-
-                        <div class="form-check w-50 p-4 mx-3">
-                            <input class="form-check-input" type="checkbox" value="" id="checkPolicy">
-                            <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
-                        </div>
-                        <div class="calcolabtn form-check w-50 p-4 mx-5 d-flex justify-content-between py-5">
-                            <button type="button" class="btn btn-primary">Calcola Preventivo</button>
-                            <h3 class="risultato">Prezzo Finale</h3><br>
-                        </div>
-
-                        <div class="col-md-12 d-flex align-items-center justify-content-end">
-                            <div class="card" style="width: 18rem;">
-                                img da inserire (300x200)
-                                <div class="card-body">
-                                    <h5 class="card-title">I nostri contatti</h5>
-                                    <p class="card-text">Se hai bisogno di aiuto puoi contattarci.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">help@boolfactory.test</li>
-                                    <li class="list-group-item">+1122334455</li>
-                                    <li class="list-group-item"><a href="">Help Desk</a></li>
-                                </ul>
-                            
-                            </div>
-                        </div>
-
+                    <!-- NAME -->
+                    <div class="form-group p-2">
+                        <label class="p-2" for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome" autocomplete="off">
+                    </div>
+                    <!-- LASTNAME -->
+                    <div class="form-group p-2">
+                        <label class="p-2" for="lastname">Cognome</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Inserisci il tuo cognome" autocomplete="off">
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="form-group p-2">
+                        <label class="p-2" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email" autocomplete="off">
+                    </div>
+                    <!-- WORKS -->
+                    <div class="form-group p-2">
+                        <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
+                        <select class="form-select" id="typeofwork">
+                            <option selected>Seleziona il tipo di lavoro</option>
+                            <option value="1">Lavoro di Tipo 1</option>
+                            <option value="2">Lavoro di Tipo 2</option>
+                            <option value="3">Lavoro di Tipo 3</option>
+                        </select>
+                    </div>
+                    <!-- TEXTAREA -->
+                    <div class="form-group p-2">
+                        <label for="textArea" class="form-label p-2">Descrizione</label>
+                        <textarea class="form-control" id="textArea" rows="3"></textarea>
+                    </div>
+                    <!-- PROMO CODE -->
+                    <div class="form-group p-2">
+                        <label class="p-2" for="discountcode">Codice Promozionale (Opzionale)</label>
+                        <input type="text" class="form-control" id="discountcode" placeholder="Inserisci un codice promozionale valido" autocomplete="off">
+                    </div>
+                    <!-- PRIVACY POLICY -->
+                    <div class="form-check p-4">
+                        <input class="form-check-input" type="checkbox" id="checkPolicy">
+                        <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
+                    </div>
+                    <!-- BUTTON -->
+                    <div class="form-check p-4 d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary">Calcola Preventivo</button>
+                        <h3 class="risultato">Prezzo Finale</h3>
+                    </div>
                 </form>
             </div>
-        </div>
+
+            <!-- COLONNA CARD -->
+            <div class="bodycard col-md-4 d-flex align-items-start justify-content-end py-4 px-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/foto card.jpg" class="card-img-top" alt="Placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title">I nostri contatti</h5>
+                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">help@boolfactory.test</li>
+                        <li class="list-group-item">+1122334455</li>
+                        <li class="list-group-item"><a href="#">Help Desk</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- FOOTER BAR -->
-
+    <!-- FOOTER -->
     <footer>
         <nav class="navbar bg-dark">
             <div class="container-fluid d-flex justify-content-center align-items-center">
-                <p class="footerText text-white ">©2024 - Tutti i diritti reservati</p>
+                <p class="footerText text-white">©2024 - Tutti i diritti riservati</p>
             </div>
         </nav>
     </footer>
-
-
-
-
 
     <!-- LINK JAVA SCRIPT-->
     <script src="./js/script.js"></script>
