@@ -44,7 +44,8 @@
                 <form action="" id="user-form">
                     <div class="containertididascalia">
                         <h2 class="preventivo text-dark p-3 py-0">Richiesta Preventivo</h2>
-                    <p class="textCompila p-3 py-0">Compila un form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                        <p class="textCompila p-3 py-0">Compila un form per richiedere un preventivo per i nostri
+                            servizi di sviluppo.</p>
                     </div>
                     <!-- NAME -->
                     <div class="form-group p-2">
@@ -69,9 +70,9 @@
                         <label class="p-2" for="typeofwork">Tipo di Lavoro</label>
                         <select class="form-select" id="typeofwork">
                             <option selected>Seleziona il tipo di lavoro</option>
-                            <option value="1">Lavoro di Tipo 1</option>
-                            <option value="2">Lavoro di Tipo 2</option>
-                            <option value="3">Lavoro di Tipo 3</option>
+                            <option value="1">Backend Development</option>
+                            <option value="2">Frontend Development</option>
+                            <option value="3">Project Analysis</option>
                         </select>
                     </div>
                     <!-- TEXTAREA -->
@@ -91,10 +92,16 @@
                         <label class="form-check-label" for="checkPolicy">Accetto la Privacy Policy</label>
                     </div>
                     <!-- BUTTON -->
-                    <div class="form-check p-4 d-flex justify-content-around m-4">
-                        <button type="buttonCalcolaPrev" class="btn btn-primary ">Calcola Preventivo</button>
-                        <h3 class="risultatoText">Prezzo Finale <span class="">€200,00</span></h3>
-
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check p-4 d-flex justify-content-center m-4">
+                                <button type="buttonCalcolaPrev" class="btn btn-primary ">Calcola Preventivo</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-4 my-2 gap">
+                            <h5 class="text-center fw-bold">Prezzo Finale</h5>
+                            <p class="text-center fs-3 fw-bold"></p>
+                        </div>
                     </div>
                 </form>
             </div>
