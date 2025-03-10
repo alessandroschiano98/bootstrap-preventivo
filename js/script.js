@@ -39,17 +39,19 @@ function gestioneUserForm(event) {
     // PRELEVARE I DATI DEGLI INPUTS //
     const typeOfWork = typeOfWorkSelect.value;
 
+    // CICLO PER LE VARIE POSSIBILITA' SECONDO IL PREZZIARIO / ORARIO
     let priceOfWorks = 10;
-    if (typeOfWork === "backend") {
-        priceOfWorks = parseFloat(20.50);
+    if (typeOfWorkSelect.value === "backend") {
+        priceOfWorks = parseFloat(10 * 20.50);
     } else if (typeOfWorkSelect.value === "frontend") {
-        priceOfWorks = parseFloat(15.30);
+        priceOfWorks = parseFloat(10 * 15.30);
     } else if (typeOfWorkSelect.value === "project") {
-    priceOfWorks = parseFloat(33.60);
+        priceOfWorks = parseFloat(10 * 33.60);
     }
-    finalPrice = priceOfWorks * typeOfWork;
+    finalPrice = priceOfWorks;
 
-// STAMPIAMO I DATI PRELEVATI PER FARLI RISULTARE IN PAGINA
+
+    // STAMPIAMO I DATI PRELEVATI PER FARLI RISULTARE IN PAGINA
     finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
 
 }
