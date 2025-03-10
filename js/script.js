@@ -12,39 +12,46 @@ console.log(lastnameLabel);
 const emailLabel = document.getElementById("email")
 console.log(emailLabel);
 
-const codeLabel = document.getElementById("discountcode")
-
 const typeOfWorkSelect = document.getElementById("typeOfWork")
 console.log(typeOfWorkSelect);
 
-const buttonCalcolaSubmit = document.getElementById ("buttonCalcola")
+const textAreaSpace = document.getElementById("textArea")
+console.log(textAreaSpace);
+
+const codeLabel = document.getElementById("discountcode")
+console.log(codeLabel);
+
+const checkPolicyInput = document.getElementById("checkPolicy")
+console.log(checkPolicyInput);
+
+const buttonCalcolaSubmit = document.getElementById("buttonCalcola")
 console.log(buttonCalcolaSubmit);
 
-const finalPriceResult = document.getElementById ("finalPrice")
+const finalPriceResult = document.getElementById("finalPrice")
 console.log(finalPriceResult);
 
-/*
-// PREZZI ORARI 
-const commissioni = {
-    1: 20.50, // Sviluppo backend (22 ore) 20,50€ x ora
-    2: 15.30, // Sviluppo frontend (32 ore) 15,30€ x ora
-    3: 33.60  // Project analysis (24 ore) 33,60€ x ora
-};
-*/
+userForm.addEventListener("submit", gestioneUserForm);
 
-userForm.addEventListener("buttonCalcola", gestisciUserForm);
 
-function gestisciUserForm(event) {
+function gestioneUserForm(event) {
     event.preventDefault();
-    // PRELEVO I VALORI DEGLI INPUT
-    const name = nameLabel.value;
-    const lastname = lastnameLabel.value;
-    const email = emailLabel.value;
-    const discountcode = codeLabel.value;
+
+    // PRELEVARE I DATI DEGLI INPUTS //
     const typeOfWork = typeOfWorkSelect.value;
 
+    let priceOfWorks = 10;
+    if (typeOfWork === "backend") {
+        priceOfWorks = parseFloat(20.50);
+    } else if (typeOfWorkSelect.value === "frontend") {
+        priceOfWorks = parseFloat(15.30);
+    } else if (typeOfWorkSelect.value === "project") {
+    priceOfWorks = parseFloat(33.60);
+    }
+    finalPrice = priceOfWorks * typeOfWork;
 
+// STAMPIAMO I DATI PRELEVATI PER FARLI RISULTARE IN PAGINA
+    finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
 
-};
+}
 
 
