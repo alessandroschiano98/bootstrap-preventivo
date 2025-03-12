@@ -40,7 +40,7 @@ function gestioneUserForm(event) {
     const typeOfWork = typeOfWorkSelect.value;
 
     // CICLO PER LE VARIE POSSIBILITA' SECONDO IL PREZZIARIO / ORARIO
-    let priceOfWorks = 10;
+    let priceOfWorks = 0;
     if (typeOfWorkSelect.value === "backend") {
         priceOfWorks = parseFloat(10 * 20.50);
     } else if (typeOfWorkSelect.value === "frontend") {
@@ -49,6 +49,13 @@ function gestioneUserForm(event) {
         priceOfWorks = parseFloat(10 * 33.60);
     }
     finalPrice = priceOfWorks;
+    // YHDNU32, JANJC63, PWKCN25, SJDPO96, POCIE24  CODICI SCONTO//
+    const discount25Code = [`YHDNU32`, `JANJC63`, `PWKCN25`, `SJDPO96`, `POCIE24`];
+    if (codeLabel.value === discount25Code) {
+        finalPriceResult = finalPrice - (finalPriceResult * 25 / 100);
+    } else (codeLabel.value === "");
+
+
 
 
     // STAMPIAMO I DATI PRELEVATI PER FARLI RISULTARE IN PAGINA
