@@ -79,6 +79,7 @@ function gestioneUserForm(event) {
         alert("Hai inserito un codice sconto errato");
     }
 
+    // Se l'lemento checkPolicy (HTML) risulta false allora esce alert
     if (document.getElementById("checkPolicy").checked === false) {
         alert("Accetta la policy per proseguire");
     }
