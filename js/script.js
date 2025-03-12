@@ -1,3 +1,4 @@
+// Il codice inizia recuperando gli elementi del modulo HTML utilizzando document.getElementById(). Per ogni elemento selezionato, viene stampato il riferimento nella console con console.log(). Gli elementi selezionati includono:
 
 // FORM INPUT 
 const userForm = document.getElementById("user-form")
@@ -30,13 +31,17 @@ console.log(buttonCalcolaSubmit);
 const finalPriceResult = document.getElementById("finalPrice")
 console.log(finalPriceResult);
 
+// L'evento submit viene associato al form con:
+// Ciò significa che quando l'utente invia il form, viene eseguita la funzione gestioneUserForm().
 userForm.addEventListener("submit", gestioneUserForm);
 
 
 userForm.addEventListener("submit", gestioneUserForm);
+
 
 function gestioneUserForm(event) {
     event.preventDefault();
+    //Questo impedisce il comportamento predefinito del form (che sarebbe l'invio e il refresh della pagina).
 
     // PRELEVARE I DATI DEGLI INPUTS //
     const typeOfWork = typeOfWorkSelect.value;
@@ -53,15 +58,14 @@ function gestioneUserForm(event) {
 
     let finalPrice = priceOfWorks;
 
-    // CODICI SCONTO VALIDI
+    // Viene creata una lista di codici sconto validi:
     const discount25Code = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
-    // VERIFICA SE IL CODICE INSERITO È VALIDO
+    // Poi viene verificato se il codice inserito è presente in questa lista:
     if (discount25Code.includes(codeLabel.value)) {
-        finalPrice = finalPrice - (finalPrice * 25 / 100);
-    } else (codeLabel.value = "");
+        finalPrice = priceOfWorks - (finalPrice * 25 / 100);}
 
-    // STAMPA IL RISULTATO
+    // Stampare il risultato:
     finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
 }
 
