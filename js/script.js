@@ -33,34 +33,36 @@ console.log(finalPriceResult);
 userForm.addEventListener("submit", gestioneUserForm);
 
 
+userForm.addEventListener("submit", gestioneUserForm);
+
 function gestioneUserForm(event) {
     event.preventDefault();
 
     // PRELEVARE I DATI DEGLI INPUTS //
     const typeOfWork = typeOfWorkSelect.value;
-
-    // CICLO PER LE VARIE POSSIBILITA' SECONDO IL PREZZIARIO / ORARIO
     let priceOfWorks = 0;
-    if (typeOfWorkSelect.value === "backend") {
-        priceOfWorks = parseFloat(10 * 20.50);
-    } else if (typeOfWorkSelect.value === "frontend") {
-        priceOfWorks = parseFloat(10 * 15.30);
-    } else if (typeOfWorkSelect.value === "project") {
-        priceOfWorks = parseFloat(10 * 33.60);
+
+    // DETERMINARE IL PREZZO IN BASE AL TIPO DI LAVORO
+    if (typeOfWork === "backend") {
+        priceOfWorks = 10 * 20.50;
+    } else if (typeOfWork === "frontend") {
+        priceOfWorks = 10 * 15.30;
+    } else if (typeOfWork === "project") {
+        priceOfWorks = 10 * 33.60;
     }
-    finalPrice = priceOfWorks;
-    // YHDNU32, JANJC63, PWKCN25, SJDPO96, POCIE24  CODICI SCONTO//
-    const discount25Code = [`YHDNU32`, `JANJC63`, `PWKCN25`, `SJDPO96`, `POCIE24`];
-    if (codeLabel.value === discount25Code) {
-        finalPriceResult = finalPrice - (finalPriceResult * 25 / 100);
-    } else (codeLabel.value === "");
 
+    let finalPrice = priceOfWorks;
 
+    // CODICI SCONTO VALIDI
+    const discount25Code = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
+    // VERIFICA SE IL CODICE INSERITO È VALIDO
+    if (discount25Code.includes(codeLabel.value)) {
+        finalPrice = finalPrice - (finalPrice * 25 / 100);
+    } else (codeLabel.value = "");
 
-    // STAMPIAMO I DATI PRELEVATI PER FARLI RISULTARE IN PAGINA
+    // STAMPA IL RISULTATO
     finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
-
 }
 
 
