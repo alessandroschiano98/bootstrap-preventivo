@@ -35,15 +35,23 @@ console.log(finalPriceResult);
 // Ciò significa che quando l'utente invia il form, viene eseguita la funzione gestioneUserForm().
 userForm.addEventListener("submit", gestioneUserForm);
 
+// ACCETTA POLICY
 
-userForm.addEventListener("submit", gestioneUserForm);
+function check() {
+    document.getElementById("checkPolicy").checked = true;
+}
+
+function uncheck() {
+    document.getElementById("checkPolicy").checked = false;
+
+}
 
 
 function gestioneUserForm(event) {
     event.preventDefault();
     //Questo impedisce il comportamento predefinito del form (che sarebbe l'invio e il refresh della pagina).
 
-    // PRELEVARE I DATI DEGLI INPUTS //
+    // PRELEVARE I DATI DEGLI INPUTS
     const typeOfWork = typeOfWorkSelect.value;
     let priceOfWorks = 0;
 
@@ -63,10 +71,25 @@ function gestioneUserForm(event) {
 
     // Poi viene verificato se il codice inserito è presente in questa lista:
     if (discount25Code.includes(codeLabel.value)) {
-        finalPrice = priceOfWorks - (finalPrice * 25 / 100);}
+        finalPrice = priceOfWorks - (finalPrice * 25 / 100);
+    } else if (codeLabel.value === "") {
+        finalPrice = priceOfWorks;
+    }
+    else {
+        alert("Hai inserito un codice sconto errato");
+    }
+
+    if (document.getElementById("checkPolicy").checked === false) {
+        alert("Accetta la policy per proseguire");
+    }
+
 
     // Stampare il risultato:
     finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
+
+    // il metodo .toFixed(2) viene utilizzato per formattare un numero con un numero fisso di cifre decimali. Il valore tra parentesi (in questo caso 2) specifica il numero di decimali desiderati.
 }
+
+
 
 
