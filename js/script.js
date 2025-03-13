@@ -1,4 +1,6 @@
-// Il codice inizia recuperando gli elementi del modulo HTML utilizzando document.getElementById(). Per ogni elemento selezionato, viene stampato il riferimento nella console con console.log(). Gli elementi selezionati includono:
+// IL CODICE INIZIA RECUPERANDO GLI ELEMENTI DEL MODULO HTML UTILIZZANDO document.getElementById().
+// PER OGNI ELEMENTO SELEZIONATO, VIENE STAMPATO IL RIFERIMENTO NELLA CONSOLE CON console.log().
+// GLI ELEMENTI SELEZIONATI INCLUDONO:
 
 // FORM INPUT 
 const userForm = document.getElementById("user-form")
@@ -31,8 +33,8 @@ console.log(buttonCalcolaSubmit);
 const finalPriceResult = document.getElementById("finalPrice")
 console.log(finalPriceResult);
 
-// L'evento submit viene associato al form con:
-// Ciò significa che quando l'utente invia il form, viene eseguita la funzione gestioneUserForm().
+// L'EVENTO SUBMIT VIENE ASSOCIATO AL FORM CON:
+// CIÒ SIGNIFICA CHE QUANDO L'UTENTE INVIA IL FORM, VIENE ESEGUITA LA FUNZIONE gestioneUserForm().
 userForm.addEventListener("submit", gestioneUserForm);
 
 // ACCETTA POLICY
@@ -43,19 +45,17 @@ function check() {
 
 function uncheck() {
     document.getElementById("checkPolicy").checked = false;
-
 }
-
 
 function gestioneUserForm(event) {
     event.preventDefault();
-    //Questo impedisce il comportamento predefinito del form (che sarebbe l'invio e il refresh della pagina).
+    // QUESTO IMPEDISCE IL COMPORTAMENTO PREDEFINITO DEL FORM (CHE SAREBBE L'INVIO E IL REFRESH DELLA PAGINA).
 
     // PRELEVARE I DATI DEGLI INPUTS
     const typeOfWork = typeOfWorkSelect.value;
     let priceOfWorks = 0;
 
-    // DETERMINARE IL PREZZO IN BASE AL TIPO DI LAVORO
+    // DETERMINARE IL PREZZO IN BASE AL TIPO DI LAVORO (ISTRUZIONI CONDIZIONALI)
     if (typeOfWork === "backend") {
         priceOfWorks = 10 * 20.50;
     } else if (typeOfWork === "frontend") {
@@ -66,11 +66,10 @@ function gestioneUserForm(event) {
 
     let finalPrice = priceOfWorks;
 
-    // Viene creata una lista di codici sconto validi:
+    // VIENE CREATA UNA LISTA DI CODICI SCONTO VALIDI:
     const discount25Code = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
-
-    // Poi viene verificato se il codice inserito è presente in questa lista:
+    // POI VIENE VERIFICATO SE IL CODICE INSERITO È PRESENTE IN QUESTA LISTA:
     if (discount25Code.includes(codeLabel.value)) {
         finalPrice = priceOfWorks - (finalPrice * 25 / 100);
     } else if (codeLabel.value === "") {
@@ -80,27 +79,24 @@ function gestioneUserForm(event) {
         alert("Hai inserito un codice sconto errato");
     }
 
-    // Se l'elemento checkPolicy (HTML) risulta false allora esce alert
+    // SE L'ELEMENTO checkPolicy (HTML) RISULTA FALSE ALLORA ESCE ALERT
     if (document.getElementById("checkPolicy").checked === false) {
         alert("Accetta la policy per proseguire");
     }
 
-    // Convertiamo il prezzo in stringa con 2 decimali
-    const prezzoStringa = finalPrice.toFixed(2); 
+    // CONVERTIAMO IL PREZZO IN STRINGA CON 2 DECIMALI
+    const prezzoFinaleStringa = finalPrice.toFixed(2); 
 
-    // Separiamo la parte intera da quella decimale
-    const parteIntera = prezzoStringa.split(".")[0];
-    const parteDecimale = prezzoStringa.split(".")[1];
+    // SEPARIAMO LA PARTE INTERA DA QUELLA DECIMALE
+    const parteIntera = prezzoFinaleStringa.split(".")[0];
+    const parteDecimale = prezzoFinaleStringa.split(".")[1];
 
-    // Stampare il risultato:
+    // STAMPARE IL RISULTATO CON UN INTERPOLAZIONE DI STRINGHE:
     finalPriceResult.innerText = `€ ${finalPrice.toFixed(2)}`;
 
-    // Inseriamo il risultato con il bold solo sulla parte intera
+    // INSERIAMO IL RISULTATO CON IL BOLD SOLO SULLA PARTE INTERA:
     finalPriceResult.innerHTML = `<strong>€${parteIntera}</strong>.${parteDecimale}`;
 
-    // il metodo .toFixed(2) viene utilizzato per formattare un numero con un numero fisso di cifre decimali. Il valore tra parentesi (in questo caso 2) specifica il numero di decimali desiderati.
+    // IL METODO .toFixed(2) VIENE UTILIZZATO PER FORMATTARE UN NUMERO CON UN NUMERO FISSO DI CIFRE DECIMALI.
+    // IL VALORE TRA PARENTESI (IN QUESTO CASO 2) SPECIFICA IL NUMERO DI DECIMALI DESIDERATI.
 }
-
-
-
-
